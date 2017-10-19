@@ -44,7 +44,6 @@ requests==2.18.4
 simplegeneric==0.8.1
 six==1.11.0
 smart-open==1.5.3
-SpeechRecognition==3.6.3
 SQLAlchemy==1.1.14
 terminado==0.6
 textract==1.6.1
