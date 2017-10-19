@@ -1,0 +1,33 @@
+{% load static %}
+
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'test_image/style.css' %}" />
+ -->
+{% if first_match_list %}
+    <ul>
+    {% for match in first_match_list %}
+        <li><a href="{% url 'test_image:detail' match.id %}">
+        {{ match.id }}th pair: bnb id = {{match.bnb_id}} 
+
+        </a></li>
+
+
+        <div>
+
+
+        <img src = {{match.apt_img_url}}  style="width:304px;height:228px;">
+        <img src = {{match.bnb_img_url}}  style="width:304px;height:228px;">
+
+        <td><input name={{ match.id }} type="radio" value="{{ match.match }}" /></td>
+        <td><input name={{ match.id }} type="radio" value="{{ match.match }}" /></td>
+        </div>
+
+
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+  <div>
+    <button type="submit">Submit</button>
+  </div>

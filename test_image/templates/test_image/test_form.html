@@ -1,0 +1,33 @@
+<form method="post" action=""> 
+    {{ formset.management_form }}
+    {% csrf_token %}
+    {% for form in formset %}
+    {% if form.instance %}
+        <ul>
+            {{ form.apt_img_url.as_hidden }}
+            {{ form.id.as_hidden }}
+            {{ form.bnb_img_url.as_hidden }}
+            {{ form.instance.id }}
+            <img src = {{form.instance.apt_img_url}}  style="width:304px;height:228px;">
+            <img src = {{form.instance.bnb_img_url}}  style="width:304px;height:228px;">
+            {{ form.match}}
+
+        </ul>
+    {% endif %}
+
+    {% endfor %}
+    <input type="submit" value="Submit">
+</form>
+
+<!--             <li>{{ form.id }} {{ form.instance.id }}</li>
+ -->
+
+<!-- <form method="post">
+    {{ formset.management_form }}
+    {% csrf_token %}
+    {% for form in formset %}
+        {{ form }}
+    {% endfor %}
+            <input type="submit" value="Submit">
+
+</form> -->
