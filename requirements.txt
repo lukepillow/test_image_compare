@@ -14,7 +14,7 @@ docx2txt==0.6
 EbookLib==0.15
 graphviz==0.8
 gunicorn==19.7.1
-html5lib==0.9999999
+html5lib==0.999999999
 idna==2.6
 Jinja2==2.8
 jmespath==0.9.3
